@@ -2,7 +2,7 @@ extends "res://Scripts/Character.gd"
 
 func _ready():
 	$AnimationPlayer.play("Idle")
-	pass # Replace with function body.
+
 
 func _process(delta):
 	if velocity.x > 0:

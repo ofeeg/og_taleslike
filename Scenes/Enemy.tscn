@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Enemy.gd" type="Script" id=1]
 
@@ -24,6 +24,26 @@ tracks/0/keys = {
 }, {
 "args": [  ],
 "method": "flip_doing"
+} ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Hit"
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "flip_is_hit"
+}, {
+"args": [  ],
+"method": "flip_is_hit"
 } ]
 }
 
@@ -60,5 +80,6 @@ shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Attack = SubResource( 2 )
+anims/Hit = SubResource( 6 )
 anims/Idle = SubResource( 5 )
 anims/Move = SubResource( 3 )

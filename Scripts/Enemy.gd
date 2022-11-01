@@ -21,7 +21,6 @@ onready var state = IDLE
 func Do():
 	if doing: return
 	if alerted:
-		#print((bodies[0].position.x - self.position.x))
 		if clamp(bodies[0].position.x - self.position.x, -10, 10) == bodies[0].position.x - self.position.x:
 			flip_doing()
 			$AnimationPlayer.play("Attack")
@@ -37,7 +36,7 @@ func enemy_move(target, delta):
 	_direction = global_position.direction_to(target)
 	_direction.x = clamp(_direction.x, 10, 100)
 	velocity = velocity.move_toward(_direction * SPEED, ACCELERATION * delta)
-	#print(velocity)
+
 
 func hit():
 	var targets  = $Attack/Area2D.get_overlapping_bodies()
@@ -76,3 +75,6 @@ func _process(delta):
 
 func flip_doing():
 	doing != doing
+	
+func flip_is_hit():
+	is_hit != is_hit

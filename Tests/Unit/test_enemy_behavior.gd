@@ -41,6 +41,6 @@ class TestEnemyBehavior:
 		enemy.bodies.append(player)
 		player.position = Vector2(5,0)
 		enemy.Do()
-		yield(get_tree().create_timer(0.2), "timeout")
+		yield(yield_for(0.3), YIELD)
 		
 		assert_signal_emitted(enemy, "damaged")

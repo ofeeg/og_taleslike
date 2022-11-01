@@ -14,7 +14,6 @@ func _physics_process(delta):
 
 func hit():
 	var bodies  = $Attack/Area2D.get_overlapping_bodies()
-	#print(bodies)
 
 func _on_Dormant_timeout():
 	if !dormant:
