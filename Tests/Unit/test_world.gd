@@ -23,7 +23,11 @@ class TestWorld:
 	
 	func test_calculate_damage():
 		assert_ne(world.calculate_damage(player, enemies[0], 10), 0)
-		pass
+		
 	func test_damage():
 		world.damage(player, 8)
 		assert_eq(player.hp, 2)
+	
+	func test_atk_interaction():
+		world.atk_interaction(player, enemies[0], "Basic")
+		assert_true(player.is_hit)

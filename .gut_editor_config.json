@@ -12,7 +12,7 @@
  "hide_orphans": false,
  "ignore_pause": false,
  "include_subdirs": false,
- "inner_class": null,
+ "inner_class": "TestWorld",
  "junit_xml_file": "",
  "junit_xml_timestamp": false,
  "log_level": 1,
@@ -30,7 +30,7 @@
  "tests": [
 
  ],
- "unit_test_name": null,
+ "unit_test_name": "test_atk_interaction",
  "gut_on_top": true,
  "panel_options": {
   "font_name": "CourierPrime",

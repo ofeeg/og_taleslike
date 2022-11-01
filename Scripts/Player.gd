@@ -7,6 +7,8 @@ const GRAVITY = 500
 var hp = 10
 var def = 10
 var atk = 10
+var is_grounded = true
+var is_hit = false
 
 func _ready():
 	$AnimationPlayer.play("Idle")
