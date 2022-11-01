@@ -1,8 +1,6 @@
-extends KinematicBody2D
+extends "res://Scripts/Character.gd"
 
-var velocity = Vector2()
-var attacking = false
-var flipped = false
+
 const  SPEED = 200
 const ACCELERATION = 500
 var _direction
@@ -12,8 +10,6 @@ var default_locs = [self.position]
 var doing = false
 signal damaged(bodies, source, attack)
 
-var atk = 10
-var def = 10
 
 enum {
 	IDLE = 0b11111111,
@@ -45,7 +41,7 @@ func enemy_move(target, delta):
 
 func hit():
 	var targets  = $Attack/Area2D.get_overlapping_bodies()
-	emit_signal('damaged', targets, "Basic", self)
+	emit_signal('damaged', targets, self, "Basic")
 
 
 func _process(delta):

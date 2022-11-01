@@ -15,7 +15,7 @@ class TestEnemyBehavior:
 		gut.p("ran setup", 2)
 		
 	func after_all():
-		enemy.free()whenver you want to look feel freee to just look around lol
+		enemy.free()
 		
 		player.free()
 		gut.p("ran cleanup", 2)
@@ -41,5 +41,6 @@ class TestEnemyBehavior:
 		enemy.bodies.append(player)
 		player.position = Vector2(5,0)
 		enemy.Do()
-		yield(get_tree().create_timer(1), "timeout")
+		yield(get_tree().create_timer(0.2), "timeout")
+		
 		assert_signal_emitted(enemy, "damaged")
