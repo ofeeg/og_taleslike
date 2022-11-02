@@ -24,7 +24,6 @@ func _on_Dormant_timeout():
 
 
 func _on_Vision_body_entered(body):
-	print("hi")
 	dormant = false
 	$Action.start()
 	pass # Replace with function body.
@@ -42,3 +41,8 @@ func _on_Action_timeout():
 	print(moving)
 	print(dormant)
 	attacking = false
+
+
+func flip_doing():
+	doing != doing
+	

@@ -11,3 +11,8 @@ var atk = 10
 var is_grounded = true
 var is_hit = false
 var attacking = false
+
+
+func flip_is_hit():
+	is_hit = !is_hit
+	print(is_hit)

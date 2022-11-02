@@ -12,4 +12,4 @@ func damage(target, true_dmg):
 func atk_interaction(target, src, attack):
 	var raw_dmg = ATTACK_LIST.attacks.get(attack)
 	damage(target, calculate_damage(target, src, raw_dmg))
-	target.is_hit = true
+	target.get_node("AnimationPlayer").play("Hit")

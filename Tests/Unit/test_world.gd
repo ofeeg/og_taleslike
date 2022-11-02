@@ -30,4 +30,5 @@ class TestWorld:
 	
 	func test_atk_interaction():
 		world.atk_interaction(player, enemies[0], "Basic")
+		yield(yield_for(0.3), YIELD)
 		assert_true(player.is_hit)

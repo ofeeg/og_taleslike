@@ -73,8 +73,7 @@ func _process(delta):
 			$Move.visible = false
 			$AnimationPlayer.play("Idle")
 
+
 func flip_doing():
 	doing != doing
 	
-func flip_is_hit():
-	is_hit != is_hit
